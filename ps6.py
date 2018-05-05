@@ -76,13 +76,25 @@ from scipy.stats import norm
 # σ = 40
 ex1 = norm(loc=60, scale=40)
 
-# Sanity Check: CDF gives the probability a random variable would be
+# Sanity Check: CDF (cumulative distribution function) 
+# gives the probability a random variable would be
 # less than or equal to a given value.
 # If given the median value, the probability should be .5
 mid = ex1.cdf(60)
 assert mid == .5
 
-# What proportion of "houses" are less than 50k (in thousands)
+# What proportion of "houses" are less than 50k?
 print(ex1.cdf(50))
 # Correct answer: 0.4012936743170763 👍
 
+# What proportion of houses are between 60 and 80k?
+print(ex1.cdf(80) - ex1.cdf(60)) 
+# .1915 👍
+
+# The top 5% of houses cost at least:
+print(ex1.ppf(.95))
+# 125.79414507805889 👍
+# PPF (Percent point function) is the inverse of CDF
+# Given a probability of getting a random variable
+# above a certain value, you get the minimum value
+# you would need to satisfy the condition
