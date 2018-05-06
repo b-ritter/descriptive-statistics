@@ -7,3 +7,5 @@ Histogram of means of the sums of two tetrahedral die.
 ![](images/tetrahedral.png)
 
 ![](images/die_rolls.png)
+
+![](images/die_rolls_pairs.png)
