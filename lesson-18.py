@@ -11,9 +11,9 @@ print(st.mean(tetrahedral))
 # >>> np.arange(1,5,.5)
 # array([1. , 1.5, 2. , 2.5, 3. , 3.5, 4. , 4.5])
 plt.hist(tetrahedral, edgecolor='white', bins=np.arange(1, 5, .5))
-plt.xlabel('Mean sum of two tetrahedral Die')
+plt.xlabel('Mean sum of two tetrahedral dice')
 plt.ylabel('Frequency')
-# plt.show()
+plt.show()
 
 def pop_std_dv(arr):
   return math.sqrt(st.pvariance(arr))
